@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import Pm_number2 from './Pm_number2';
 import * as serviceWorker from './serviceWorker';
 

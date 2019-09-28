@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './MyStyle.css';
 
 class Pm_number2 extends Component {
     constructor(props) {
@@ -29,27 +30,25 @@ class Pm_number2 extends Component {
           parseInt(this.setState({output:this.state.num1 ** this.state.num2}))
         }   
     }
-
     render() {
         return (
             <center>
-                <div>
-                    
-                    <form>
-                        <input style={{ color: "black",fontSize:"20px",  borderStyle: "inset" }} type="text" placeholder="Enter Number" onChange={(e) => this.handleFirstNum(e)}></input><span></span>
-                        <input style={{ color: "black",fontSize:"20px", borderStyle: "inset" }} type="text" placeholder="Enter Number" onChange={(e) => this.handleSecondNum(e)}></input>
-                        <br></br><br></br>
-                        {this.state.num1} and {this.state.num2}
-                    </form>
+                <div class = "container">
+                    <div class = "box">
+                        <form>
+                            <input style={{ color: "black",fontSize:"20px",  borderStyle: "inset" }} type="text" placeholder="Enter First Number" onChange={(e) => this.handleFirstNum(e)}></input><span></span>
+                            <input style={{ color: "black",fontSize:"20px", borderStyle: "inset" }} type="text" placeholder="Enter Second Number" onChange={(e) => this.handleSecondNum(e)}></input>
+                            <div><h1>{this.state.num1} and {this.state.num2}</h1></div>
+                        </form>
 
-                    <div style={{ color: "black", width: "50px",fontSize:"20px" }} >Result: {this.state.output}</div><br></br>
-                    <div>
-                        <button value="+" onClick={(e)=>this.handleOption(e)}>+</button>
-                        <button value="-" onClick={(e)=>this.handleOption(e)}>-</button>
-                        <button value="*" onClick={(e)=>this.handleOption(e)}>*</button>
-                        <button value="/" onClick={(e)=>this.handleOption(e)}> /</button>
-                        <button value="^" onClick={(e)=>this.handleOption(e)}>^</button>
-                      
+                        <div><h2>Result <br></br> {this.state.output}</h2></div>
+                        <div>
+                            <button value="+" onClick={(e)=>this.handleOption(e)}>+</button>
+                            <button value="-" onClick={(e)=>this.handleOption(e)}>-</button>
+                            <button value="*" onClick={(e)=>this.handleOption(e)}>*</button>
+                            <button value="/" onClick={(e)=>this.handleOption(e)}> /</button>
+                            <button value="^" onClick={(e)=>this.handleOption(e)}>^</button>
+                        </div>
                     </div>
                 </div>
             </center>
